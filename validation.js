@@ -7,7 +7,7 @@ document.forms["connexion"].addEventListener("submit", function(e) {
 	for (var i = 0; i < inputs.length; i++) {
 		console.log(inputs[i]);
 		if (!inputs[i].value) {
-			erreur = "Veuillez renseigner tous les champs";
+			erreur = "Veuillez remplir tous les champs";
 			break;
 		}
 	}
@@ -17,7 +17,7 @@ document.forms["connexion"].addEventListener("submit", function(e) {
 		document.getElementById("erreur").innerHTML = erreur;
 		return false;
 	} else {
-		alert('Formulaire envoyé !');
+		alert('Merci de nous avoir fournis vos données!');
 	}
 	
 });
