@@ -16,15 +16,16 @@
     <article>
         <h2>En lisant ceci</h2>
         <p>vous êtes prêt(e) à nous communiquer vos coordonnées. </p>
-        <form class="pure-form pure-form-aligned" action="/ma-page-de-traitement" method="post">
+
+        <form id="connexion" class="pure-form pure-form-aligned"  method="post">
 
             <fieldset>
                 <legend>Vous êtes ?</legend>
 
-                    <label for="soup">Homme</label>
+                    <label for="Homme">Homme</label>
                     <input type="checkbox" id="Homme" name="meal" value="Homme">
     
-                    <label for="curry">Femme</label>
+                    <label for="Femme+">Femme</label>
                     <input type="checkbox" id="Femme" name="Femme" value="Femme">
         
             </fieldset>
@@ -35,7 +36,7 @@
             </div>
             <div class="pure-control-group">
                 <label for="mail">e-mail :</label>
-                <input type="email" id="mail" name="user_mail">
+                <input type="email" id="mail" name="user_mail" placeholder="exemple@yahoo.fr">
             </div>
 
             <div class="pure-control-group">
@@ -44,16 +45,22 @@
             </div>
 
             <div class="pure-control-group">
+                <label for="mdp">Vérification mot de passe :</label>
+                <input type="password" id="mdp2" name="user_mdp">
+            </div>
+
+            <div class="pure-control-group">
                 <label for="telephone">Numéro de téléphone :</label>
                 <input type="tel" id="telephone" name="user_telephone">
             </div>
             
-            <div class="pure-control-group">
+           
                 <label for="naissance">Quel est votre année de naissance ?</label>
                 <input type="text" id="naissance" list="naissance" />
                 <datalist id="maSuggestion">
                     <option>2019</option>
-                    <option>2018</option><option>2017</option>
+                    <option>2018</option>
+                    <option>2017</option>
                     <option>2016</option>
                     <option>2015</option>
                     <option>2014</option>
@@ -130,28 +137,27 @@
                     <option>1942</option>
                     <option>1941</option>
                     <option>1940</option>
-                  </datalist>
-            </div>
-                    
-      
+                </datalist>
+            
 
-            <div class="pure-control-group">
-                <label for="msg">Message :</label>
-                <textarea id="msg" name="user_message"></textarea>
-            </div>
 
             <div class="pure-controls">
                 <label for="cb" class="pure-checkbox">
                     <input id="cb" type="checkbox"> J'accepte que mes informations soit utilisé à des fins commercials
                 </label>
             
-            <button type="submit" class="pure-button pure-button-primary">Envoyer</button>
+            <button type="submit">Envoyer</button>
              </div>
 
+             
         </form>
     </article>
 
+<p style="color:red" id="erreur"></p>
+
 <script src="validation.js"></script>
+
+
 </body>
 
 </html>
